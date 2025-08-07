@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5795D3"
+    android:gravity="center">
+
+<ImageView
+android:id="@+id/logo"
+android:layout_width="220dp"
+android:layout_height="220dp"
+android:layout_centerHorizontal="true"
+android:layout_marginTop="60dp"
+android:src="@drawable/elogo"
+android:scaleType="centerInside" />
+
+<TextView
+    android:id="@+id/welcomeText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/logo"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="16dp"
+    android:text="Welcome to EMS!"
+    android:textColor="#FFFFFF"
+    android:textSize="22sp"
+    android:textStyle="bold" />
+
+    <!-- Stylish ProgressBar Container -->
+<FrameLayout
+android:id="@+id/progressBarContainer"
+android:layout_width="280dp"
+android:layout_height="20dp"
+android:layout_below="@id/welcomeText"
+android:layout_centerHorizontal="true"
+android:layout_marginTop="32dp"
+android:background="@drawable/progress_background">
+
+<ProgressBar
+    android:id="@+id/progressBar"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:max="100"
+    android:progress="0"
+    android:progressDrawable="@drawable/progress_custom" />
+</FrameLayout>
+
+<TextView
+android:id="@+id/progressText"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="0%"
+android:textColor="#2D3E50"
+android:textStyle="bold"
+android:textSize="16sp"
+android:layout_below="@id/progressBarContainer"
+android:layout_centerHorizontal="true"
+android:layout_marginTop="12dp" />
+
+<TextView
+    android:id="@+id/loadingText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/progressText"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="8dp"
+    android:text="Loading..."
+    android:textColor="#FFFFFF"
+    android:textSize="16sp" />
+    </RelativeLayout>
